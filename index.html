@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Escola Bueno | Formação de Condutores</title>
+  <!-- Bootstrap 5 CSS + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      color: white;
+      padding: 5rem 0;
+    }
+    .hero .display-4 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .service-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background-color: #e7f1ff;
+      color: #0d6efd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      background-color: #1e293b;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      padding-top: 3rem;
+    }
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .footer h5, .footer h6 {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .footer .list-unstyled li {
+      margin-bottom: 0.6rem;
+    }
+    .footer .bi {
+      margin-right: 0.5rem;
+      color: #3b82f6;
+    }
+    .privacy-link {
+      font-weight: 500;
+    }
+    .cnpj {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    .address-block p {
+      margin-bottom: 0.3rem;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
 
+  <!-- NAVBAR (simples, com link para contato) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">
+        <i class="bi bi-car-front-fill me-2"></i>Auto Escola Bueno
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#contato">Matricule-se</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="margin-top: 76px;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold mb-4">Habilite-se com segurança e confiança</h1>
+          <p class="lead mb-4 fs-4 opacity-75">A Auto Escola Bueno forma condutores conscientes e preparados para o trânsito. Aulas práticas e teóricas com instrutores experientes.</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="#contato" class="btn btn-light btn-lg px-4 py-2 fw-semibold text-primary">
+              <i class="bi bi-pencil-square me-2"></i>Quero me matricular
+            </a>
+            <a href="#servicos" class="btn btn-outline-light btn-lg px-4 py-2">
+              <i class="bi bi-info-circle me-2"></i>Saiba mais
+            </a>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start small opacity-75">
+            <span><i class="bi bi-check-circle-fill me-1"></i> CNPJ ativo</span>
+            <span><i class="bi bi-check-circle-fill me-1"></i> Instrutores credenciados</span>
+            <span><i class="bi bi-check-circle-fill me-1"></i> Frota moderna</span>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block text-center">
+          <i class="bi bi-car-front-fill" style="font-size: 12rem; opacity: 0.15;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">Nossos Serviços</h2>
+        <p class="text-muted fs-5">Tudo o que você precisa para tirar sua habilitação</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100 p-4 text-center">
+            <div class="icon-circle mx-auto">
+              <i class="bi bi-book"></i>
+            </div>
+            <h5 class="fw-bold">Curso Teórico</h5>
+            <p class="text-muted">Aulas presenciais e material didático atualizado conforme as normas do CONTRAN.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100 p-4 text-center">
+            <div class="icon-circle mx-auto">
+              <i class="bi bi-steering-wheel"></i>
+            </div>
+            <h5 class="fw-bold">Aulas Práticas</h5>
+            <p class="text-muted">Carros com direção hidráulica, ar-condicionado e instrutores pacientes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100 p-4 text-center">
+            <div class="icon-circle mx-auto">
+              <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <h5 class="fw-bold">Assessoria Completa</h5>
+            <p class="text-muted">Auxiliamos em toda a documentação, agendamento de exames e burocracias.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VANTAGENS / DIFERENCIAIS -->
+  <section id="vantagens" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="fw-bold display-6 mb-4">Por que escolher a Auto Escola Bueno?</h2>
+          <ul class="list-unstyled">
+            <li class="mb-3 d-flex">
+              <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+              <span class="fs-5">Mais de 15 anos de experiência em formação de condutores.</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+              <span class="fs-5">Instrutores qualificados e credenciados pelo DETRAN/MG.</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+              <span class="fs-5">Horários flexíveis, incluindo finais de semana.</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+              <span class="fs-5">Localização central em Juruaia/MG, de fácil acesso.</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+              <span class="fs-5">Acompanhamento pós-curso para dúvidas.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-primary bg-gradient text-white p-5 rounded-4 shadow">
+            <h3 class="fw-bold mb-3">Pronto para começar?</h3>
+            <p class="mb-4 fs-5">Entre em contato agora mesmo e garanta sua vaga. Turmas reduzidas e atendimento personalizado.</p>
+            <a href="#contato" class="btn btn-light btn-lg text-primary fw-semibold px-4">
+              <i class="bi bi-telephone me-2"></i>Fale conosco
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / INFORMAÇÕES (pré-rodapé) -->
+  <section id="contato" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">Entre em contato</h2>
+        <p class="text-muted fs-5">Tire suas dúvidas ou agende uma visita</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 p-4 text-center">
+            <i class="bi bi-envelope-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">E-mail</h5>
+            <p class="mb-2"><a href="mailto:ccontagil@yahoo.com.br" class="text-decoration-none">ccontagil@yahoo.com.br</a></p>
+            <small class="text-muted">Resposta em até 24h</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 p-4 text-center">
+            <i class="bi bi-telephone-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">Telefones</h5>
+            <p class="mb-1"><a href="tel:+553535531689" class="text-decoration-none">(35) 3553-1689</a></p>
+            <p class="mb-2"><a href="tel:+553535531231" class="text-decoration-none">(35) 3553-1231</a></p>
+            <small class="text-muted">Seg. a Sex. 8h às 18h</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 p-4 text-center">
+            <i class="bi bi-geo-alt-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">Endereço</h5>
+            <p class="mb-1">Praça Prefeito Benjamim Antônio, 404</p>
+            <p class="mb-2">Centro - Juruaia/MG</p>
+            <small class="text-muted">CEP 37805-000</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ com todas as informações de registro, contato e política -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Coluna 1: Informações de Registro -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-3"><i class="bi bi-building me-2"></i>Informações de Registro</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-upc-scan"></i> CNPJ: 07.595.592/0001-80</li>
+            <li><i class="bi bi-upc-scan"></i> 07595592000180</li>
+            <li class="mt-2"><i class="bi bi-briefcase"></i> Razão Social: Centro de Formação de Condutores Bueno LTDA</li>
+            <li><i class="bi bi-shop"></i> Nome Fantasia: Auto Escola Bueno</li>
+          </ul>
+        </div>
+
+        <!-- Coluna 2: Contatos -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-3"><i class="bi bi-chat-dots me-2"></i>Contatos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <i class="bi bi-envelope"></i>
+              <a href="mailto:ccontagil@yahoo.com.br">ccontagil@yahoo.com.br</a>
+              <span class="text-muted small">(Enviar E-mail)</span>
+            </li>
+            <li class="mt-3">
+              <i class="bi bi-telephone"></i>
+              <a href="tel:+553535531689">(35) 3553-1689</a>
+              <span class="text-muted small">(Ligar)</span>
+            </li>
+            <li>
+              <i class="bi bi-telephone"></i>
+              <a href="tel:+553535531231">(35) 3553-1231</a>
+              <span class="text-muted small">(Ligar)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Localização e Correspondência -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-3"><i class="bi bi-geo-alt me-2"></i>Localização</h5>
+          <div class="address-block">
+            <p><i class="bi bi-signpost"></i> Praça Prefeito Benjamim Antônio, 404</p>
+            <p><i class="bi bi-pin-map"></i> Bairro: Centro</p>
+            <p><i class="bi bi-mailbox"></i> CEP: 37805-000</p>
+            <p><i class="bi bi-city"></i> Juruaia - Minas Gerais</p>
+          </div>
+          <h6 class="mt-3 mb-2"><i class="bi bi-envelope-paper"></i> Para correspondência:</h6>
+          <div class="address-block small">
+            <p>Auto Escola Bueno Centro de Formação de Condutores Bueno LTDA</p>
+            <p>Praça Prefeito Benjamim Antônio 404</p>
+            <p>Centro</p>
+            <p>Juruaia MG</p>
+            <p>37805-000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha divisória e Política de Privacidade -->
+      <hr class="mt-4 border-secondary opacity-25">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2 pb-4">
+        <div class="mb-2 mb-md-0">
+          <span class="cnpj">© 2025 Auto Escola Bueno. Todos os direitos reservados.</span>
+        </div>
+        <div>
+          <a href="#" class="privacy-link" data-bs-toggle="modal" data-bs-target="#privacyModal">
+            <i class="bi bi-shield-lock me-1"></i>Política de Privacidade
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DA POLÍTICA DE PRIVACIDADE (Bootstrap) -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="privacyModalLabel"><i class="bi bi-shield-lock me-2"></i>Política de Privacidade</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <h6>1. Informações Gerais</h6>
+          <p>A Auto Escola Bueno (Centro de Formação de Condutores Bueno LTDA), inscrita no CNPJ 07.595.592/0001-80, valoriza a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+          
+          <h6>2. Coleta de Dados</h6>
+          <p>Coletamos apenas as informações necessárias para a prestação dos serviços de formação de condutores, incluindo: nome completo, CPF, RG, data de nascimento, endereço, telefone, e-mail e documentos exigidos pelo DETRAN/MG. Os dados são obtidos por meio de formulários físicos ou digitais no momento da matrícula.</p>
+          
+          <h6>3. Uso dos Dados</h6>
+          <p>Seus dados pessoais são utilizados exclusivamente para:</p>
+          <ul>
+            <li>Realização de matrícula e registro no curso;</li>
+            <li>Agendamento de aulas práticas e teóricas;</li>
+            <li>Comunicação sobre o andamento do processo de habilitação;</li>
+            <li>Envio de informações sobre exames e documentações;</li>
+            <li>Cumprimento de obrigações legais junto aos órgãos de trânsito.</li>
+          </ul>
+          
+          <h6>4. Compartilhamento</h6>
+          <p>Não compartilhamos seus dados com terceiros para fins comerciais. O compartilhamento ocorre apenas com órgãos públicos (DETRAN/MG, Polícia Civil, etc.) quando exigido por lei ou para a efetivação do serviço contratado.</p>
+          
+          <h6>5. Segurança</h6>
+          <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda, alteração ou destruição. O acesso às informações é restrito a funcionários autorizados.</p>
+          
+          <h6>6. Seus Direitos</h6>
+          <p>Você pode solicitar a qualquer momento: confirmação da existência de tratamento, acesso aos dados, correção de dados incompletos ou desatualizados, anonimização, bloqueio ou eliminação de dados desnecessários, e revogação do consentimento. Para exercer seus direitos, entre em contato pelo e-mail <a href="mailto:ccontagil@yahoo.com.br">ccontagil@yahoo.com.br</a>.</p>
+          
+          <h6>7. Cookies e Tecnologias</h6>
+          <p>Nosso site pode utilizar cookies para melhorar a experiência de navegação. Você pode desativar os cookies nas configurações do seu navegador, mas isso pode afetar algumas funcionalidades.</p>
+          
+          <h6>8. Alterações</h6>
+          <p>Esta política pode ser atualizada periodicamente. Recomendamos revisá-la regularmente. A data da última atualização será indicada ao final.</p>
+          
+          <h6>9. Contato do Encarregado (DPO)</h6>
+          <p>Para questões relacionadas à privacidade e proteção de dados, entre em contato pelo e-mail: <a href="mailto:ccontagil@yahoo.com.br">ccontagil@yahoo.com.br</a> ou pelo telefone (35) 3553-1689.</p>
+          
+          <p class="text-muted mt-4"><small>Última atualização: 15 de setembro de 2026.</small></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (para modal e navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
